@@ -1,0 +1,37 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        {{ .Content }}
+      </div>
+      <footer class="bt bb b--black-70">
+        <div class="pa3 pa5-ns">
+          <h4 class="f6 fw6">Détails sur la peinture</h4>
+          <dl class="f6 lh-title mv2">
+            <dt class="dib b">Dimensions:</dt>
+            <dd class="dib ml0 gray">{{ .Params.size }}</dd>
+          </dl>
+          <dl class="f6 lh-title mv2">
+            <dt class="dib b">Type</dt>
+            <dd class="dib ml0 gray">{{ .Params.type }}</dd>
+          </dl>
+          <dl class="f6 lh-title mv2">
+            <dt class="dib b">Prix</dt>
+            <dd class="dib ml0 gray">{{ .Params.price }}</dd>
+          </dl>
+          <dl class="f6 lh-title mv2">
+            <dt class="dib b">Disponibilité</dt>
+            <dd class="dib ml0 gray">{{ .Params.status }}</dd>
+          </dl>
+        </div>
+      </footer>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      {{ partial "menu-contextual.html" . }}
+    </aside>
+  </div>
+{{ end }}
