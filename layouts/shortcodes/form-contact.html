@@ -3,13 +3,13 @@
 
 <form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
 
-    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">Your Name</label>
+    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">Votre Nom</label>
     <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
 
-    <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">Email Address</label>
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">Adresse Email</label>
     <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="email"/>
     <div class="requirements f6 gray glow i ph3 overflow-hidden">
-      An email address is required.
+      Email obligatoire.
     </div>
 
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">Message</label>
